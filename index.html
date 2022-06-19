@@ -11,50 +11,59 @@
 <body>
     <header>
         <h1 class="main-title">Rock Paper Scissors</h1>
-        <p class="main-description">Be the first to win 5 times!</p>
+        <p class="main-description">First to score 5 wins!</p>
 
         <section class="game-choice">
-            <h2 id="player-choice">Your Choice</h2>
+            <div class="player-choice">
+                <img src="" id="player-choice-img" width="50px">
+                <h2 id="player-choice-text">Your Choice</h2>
+            </div>
             <h2>vs</h2>
-            <h2 id="computer-choice">Computer's Choice</h2>
+            <div class="computer-choice">
+                <h2 id="computer-choice-text">Computer's Choice</h2>
+                <img src="" id="computer-choice-img" width="50px">
+            </div>  
         </section>
     </header>
 
     <main>
-        <section class="player-points ">
-            <h2 class="player-name">Player</h2>
-            <p class="player-points">0</p>
+        <section id="player-section" class="player-points ">
+            <h2 class="name">Player</h2>
+            <p id="player-point" class="points">0</p>
         </section>
 
         <section class="choices">
             <div class="choice">
-                <img src="img/rock.png" alt="rock" class="choice-img rock" width="200px">
+                <img id="Rock" src="img/rock.png" alt="rock" class="choice-img rock" width="200px">
                 <p class="choice-text">Rock</p>
             </div>
             <div class="choice">
-                <img src="img/paper.png" alt="paper" class="choice-img paper" width="200px">
+                <img id="Paper" src="img/paper.png" alt="paper" class="choice-img paper" width="200px">
                 <p class="choice-text">Paper</p>
             </div>
             <div class="choice">
-                <img src="img/scissors.png" alt="scissors" class="choice-img scissors" width="200px">
+                <img id="Scissors" src="img/scissors.png" alt="scissors" class="choice-img scissors" width="200px">
                 <p class="choice-text">Scissors</p>
             </div>
         </section>
 
-        <section class="player-points ">
-            <h2 class="player-name">Computer</h2>
-            <p class="player-points">0</p>
+        <section id="computer-section" class="player-points ">
+            <h2 class="name">Computer</h2>
+            <p id="computer-point">0</p>
         </section>
     </main>
 
     <footer>
         <section class="game-result">
-            <p class="result-text">Game Result</p>
+            <p id="result" class="result-text">Game Result</p>
         </section>
 
         <section class="copyright">
             <p class="copyright-text">Copyright &copy; The Odin Project 2022 </p>
         </section>
     </footer>
+
+    <p class="game-count">Game Count: <span id="game-count">0</span></p>
+    <script src="game-logic.js"></script>
 </body>
 </html>

@@ -25,12 +25,17 @@ header, footer {
 .game-choice {
     display: flex;
     gap: 50px;
-    font-size: 40px;
-    margin-top: 30px;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.player-choice, .computer-choice {
+    display: flex;
+    gap: 10px;
 }
 
 .main-title {
-    font-size: 52px;
+    font-size: 60px;
 }
 
 .main-description {
@@ -107,4 +112,37 @@ main {
 .copyright-text {
     font-size: 24px;
     text-align: center;
+}
+
+.game-count {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+}
+
+.win-animation {
+    animation: UpAndDown .5s linear 2;
+}
+
+.tie-animation {
+    animation: Vibrate .1s linear 5;
+}
+
+@keyframes UpAndDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes Vibrate {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
 }
