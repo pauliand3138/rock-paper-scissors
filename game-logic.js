@@ -86,7 +86,7 @@ function increaseWinnerPointAndAnimation(winner) {
         setTimeout(() => {
             playerPointSection.classList.remove('win-animation');
         }, 500)
-        
+        checkGameEnd(winner, playerPoint + 1);
     } else if (winner == "COMPUTER") {
         computerPointText.innerText = computerPoint + 1;
         const loseAudio = new Audio("raw/lose-sound-effect.mp3");
@@ -96,7 +96,7 @@ function increaseWinnerPointAndAnimation(winner) {
         setTimeout(() => {
             computerPointSection.classList.remove('win-animation');
         }, 500)
-        
+        checkGameEnd(winner, computerPoint + 1);
     } else {
         const tieAudio = new Audio("raw/tie-sound-effect.mp3");
         tieAudio.volume = 0.2;
@@ -109,12 +109,41 @@ function increaseWinnerPointAndAnimation(winner) {
         }, 500)
 
     }
+
+    
 }
 
 function increaseGameCount() {
     const gameCountText = document.getElementById("game-count");
     let gameCount = parseInt(gameCountText.innerText);
     gameCountText.innerText = gameCount + 1;
+}
+
+function checkGameEnd(winner, point) {
+    if (point == 5) {
+        let modalTitle = document.getElementById("modal-title");
+        let modalDescription = document.getElementById("modal-description");
+        if (winner == "PLAYER") {   
+            modalTitle.innerText = "Congratulations!"
+            modalDescription.innerText = "You won the game!"
+        } else {
+            modalTitle.innerText = "Uh oh!"
+            modalDescription.innerText = "You lost the game!"
+        }
+        let modal = document.getElementById("popup-modal");
+        modal.style.display = "block";
+    }
+}
+
+function resetGame() {
+    document.getElementById("player-choice-text").innerText = "Your Choice";
+    document.getElementById("player-choice-text").innerText = "Computer Choice";
+    document.getElementById("player-choice-img").src = "";
+    document.getElementById("computer-choice-img").src = "";
+    document.getElementById("game-count").innerText = "0";
+    document.getElementById("player-point").innerText = "0";
+    document.getElementById("computer-point").innerText = "0";
+    document.getElementById("result").innerText = "Game Result";
 }
 
 const rock = document.getElementById("Rock");
@@ -133,3 +162,9 @@ scissors.onclick = function(e) {
     gameStart(e.target.id);
 }
 
+const modalButton = document.getElementById("modal-button");
+modalButton.onclick = function(e) {
+    let modal = document.getElementById("popup-modal");
+    modal.style.display = "none";
+    resetGame();
+}
