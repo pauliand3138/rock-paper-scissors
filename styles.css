@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Dilo World', sans-serif;
+    background-color: #2d2d30;
+    color: #f9faf8;
+    height: 100vh;
+    padding: 3% 12%;
+}
+
+header, footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-choice {
+    display: flex;
+    gap: 50px;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.main-title {
+    font-size: 52px;
+}
+
+.main-description {
+    font-size: 30px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7% 0;
+}
+
+.player-points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choices {
+    display: flex;
+    gap: 50px;
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.choice-img {
+    border-radius: 10px;
+    transition: transform .2s ease-in-out;
+    cursor: pointer;
+}
+
+.choice-img:hover {
+    transform: scale(1.05);
+}
+
+.rock {
+    background-color: #D2222D;
+}
+
+.paper {
+    background-color: #ffbf00;
+}
+
+.scissors {
+    background-color: #238823;
+}
+
+.player-name {
+    font-size: 35px;
+}
+
+.player-points, .choice-text {
+    font-size: 30px;
+}
+
+.result-text {
+    font-size: 40px;
+}
+
+.copyright {
+    position: fixed;
+    background-color: #1e1e1e;
+    width: 100vw;
+    padding: 10px 0;
+    bottom: 0;
+}
+
+.copyright-text {
+    font-size: 24px;
+    text-align: center;
+}
