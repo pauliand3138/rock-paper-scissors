@@ -1,4 +1,13 @@
-@import url('http://fonts.cdnfonts.com/css/dilo-world');
+@font-face {
+    font-family: 'Dilo World';
+    src: url('fonts/DiloWorldRegular.woff2') format('woff2'),
+        url('fonts/DiloWorldRegular.woff') format('woff'),
+        url('fonts/DiloWorldRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 * {
     box-sizing: border-box;
