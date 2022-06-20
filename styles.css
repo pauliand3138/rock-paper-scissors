@@ -114,11 +114,29 @@ main {
     text-align: center;
 }
 
+.github-icon {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
 .game-count {
     position: absolute;
     top: 10px;
     right: 20px;
     font-size: 30px;
+}
+
+.reset-icon {
+    position: absolute;
+    bottom: 65px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+
+.reset-icon:hover {
+    transform: scale(1.2);
 }
 
 .popup-modal {

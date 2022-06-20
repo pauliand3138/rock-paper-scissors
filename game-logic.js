@@ -137,7 +137,7 @@ function checkGameEnd(winner, point) {
 
 function resetGame() {
     document.getElementById("player-choice-text").innerText = "Your Choice";
-    document.getElementById("player-choice-text").innerText = "Computer Choice";
+    document.getElementById("computer-choice-text").innerText = "Computer's Choice";
     document.getElementById("player-choice-img").src = "";
     document.getElementById("computer-choice-img").src = "";
     document.getElementById("game-count").innerText = "0";
